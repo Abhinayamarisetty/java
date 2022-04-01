@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.Scanner;
+class best
+{
+ public static void main(String args[])
+{  
+   Scanner sc=new Scanner(System.in);
+   String name1,name2;
+   int hit1,hit2,avg1,avg2,flop1,flop2,p1,p2;
+   System.out.println("enter the name,hit,avg,flop movies");
+   name1=sc.nextLine();
+   hit1=sc.nextInt();
+   avg1=sc.nextInt();
+   flop1=sc.nextInt();
+   sc.nextLine();
+   p1=hit1*10+avg1*5+flop1*(-5);
+   
+   System.out.println("enter the name,hit,avg,flop movies");
+   name2=sc.nextLine();
+   hit2=sc.nextInt();
+   avg2=sc.nextInt();
+   flop2=sc.nextInt();
+   p2=hit2*10+avg2*5+flop2*(-5);
+   if(p1>p2)
+   System.out.println(name1+"is best actor");
+   else
+   System.out.println(name2+"is best actor");
+ 
+}
+}
+   
