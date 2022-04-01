@@ -1,0 +1,18 @@
+//To access members of class
+import java.io.*;
+class Demofunction
+{
+int x=10,y=20;
+public static void display()
+{
+System.out.println("Good Morning");
+}
+public static void main(String args[])
+{
+Demofunction obj=new Demofunction();
+obj.display();
+System.out.println("Welcome");
+System.out.println(obj.x);
+System.out.println(obj.y);
+}
+}
