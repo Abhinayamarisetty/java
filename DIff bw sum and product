@@ -1,0 +1,26 @@
+import java.io.*;
+class Difference
+{
+public static void main(String args[])throws Exception
+{
+InputStreamReader isr=new InputStreamReader(System.in);
+BufferedReader br=new BufferedReader(isr);
+int n,diff;
+n=Integer.parseInt(br.readLine());
+int sum=1+n,mul=n;
+for(int i=2;i<n;i++)
+{
+ if(n%i==0)
+ {
+    sum=sum+i;
+    mul=mul*i;
+}
+}
+diff=mul-sum;
+System.out.println(mul);
+System.out.println(sum);
+System.out.println(diff);
+
+
+}
+}
