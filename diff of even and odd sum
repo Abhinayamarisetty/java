@@ -1,0 +1,21 @@
+import java.io.*;
+class diff
+{
+public static void main(String args[])throws Exception
+{
+InputStreamReader isr=new InputStreamReader(System.in);
+BufferedReader br=new BufferedReader(isr);
+int n,esum=0,osum=0,r;
+n=Integer.parseInt(br.readLine());
+while(n>0)
+{
+r=n%10; 
+if(r%2==0)
+esum+=r;
+else
+osum+=r;
+n=n/10;
+}
+System.out.println(Math.abs(esum-osum));
+}
+}
