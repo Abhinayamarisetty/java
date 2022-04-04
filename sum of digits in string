@@ -1,0 +1,18 @@
+import java.io.*;
+class sumofdigit
+{
+public static void main(String args[])throws Exception
+{
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+String str1;
+int i,s=0;
+str1=br.readLine();
+char ch[]=str1.toCharArray();
+for(i=0;i<ch.length;i++)
+{
+if(Character.isDigit(ch[i]))
+s=s+(ch[i]-48);
+}
+System.out.print(s);
+}
+}
