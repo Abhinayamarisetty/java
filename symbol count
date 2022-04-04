@@ -1,0 +1,27 @@
+import java.io.*;
+class charcount
+{
+public static void main(String args[])throws Exception
+{
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+String str1;
+int i,l=0,u=0,d=0,s=0;
+str1=br.readLine();
+char ch[]=str1.toCharArray();
+for(i=0;i<ch.length;i++)
+{
+if(Character.isDigit(ch[i]))
+d++;
+else if(Character.isLowerCase(ch[i]))
+l++;
+else if(Character.isUpperCase(ch[i]))
+u++;
+else
+s++;
+}
+System.out.println("no of digits"+d);
+System.out.println("no of lowercases"+l);
+System.out.println("no of uppercases"+u);
+System.out.println("no of symbols"+s);
+}
+}
