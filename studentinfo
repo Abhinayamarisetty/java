@@ -1,0 +1,36 @@
+import java.io.*;
+class student
+{
+   String rollNum,name,branch,collegeName;
+   int year;
+   float per_Marks;
+   BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+   public void getdata()throws Exception
+   {
+   System.out.println("enter the rollno,Name,branch,year,percentage,college");
+   rollNum=br.readLine();
+   name=br.readLine();
+   branch=br.readLine();
+   year=Integer.parseInt(br.readLine());
+   per_Marks=Float.parseFloat(br.readLine());
+   collegeName=br.readLine();
+   }
+
+   public void display()
+  {
+   System.out.println("Roll no= "+rollNum);
+   System.out.println("Name= "+name);
+   System.out.println("Branch name= "+branch);
+   System.out.println("year= "+year);
+   System.out.println("percentage= "+per_Marks);
+   System.out.println("college name= "+collegeName);
+  }
+
+  public static void main(String args[])throws Exception
+ {
+   student s1=new student();
+   s1.getdata();
+   s1.display();
+
+  }
+ }
