@@ -1,0 +1,47 @@
+import java.io.*;
+public class static_ {
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		int eno;
+		String ename;
+		float sal;
+		static String company;
+		static float tot_sal;
+		static 
+		{
+			company="infosys";
+			tot_sal=0;
+			
+		}
+		public void getInfo()throws Exception
+		{
+			System.out.print("Enter the eno,ename,sal");
+			eno=Integer.parseInt(br.readLine());
+			ename=br.readLine();
+			sal=Float.parseFloat(br.readLine());
+			static_.tot_sal+=sal;
+		}
+		public void displayInfo()
+		{
+			System.out.println("Employee information is");
+			System.out.println("Employee Number\t=\t"+eno);
+			System.out.println("Employee Name\t=\t"+ename);
+			System.out.println("salary\t=\t"+sal);
+          System.out.println("company\t=\t"+static_.company);
+		}
+        public static void showTotal()
+        {
+        	System.out.println("Total salries paid by the comany is"+tot_sal);
+
+        }
+        public static void main(String args[])throws Exception
+        {
+        	 static_ e1=new static_();
+        	 static_ e2=new static_();
+        	 e1.getInfo();
+        	 e2.getInfo();
+        	 e1.displayInfo();
+        	 e2.displayInfo();
+        	 static_.showTotal();
+        }
+	} 
+
